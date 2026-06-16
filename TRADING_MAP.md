@@ -63,7 +63,17 @@
 
 ---
 
+## GitHub連携
+
+- リモート：`https://github.com/HosokawaTeacher/trading.git`（Private）
+- 初回push済み（前提日 2026-06-16）。コミット `a41c30cb87e1fd658a42f0bef29ec1843b3044d7` = リモート `main`
+- `.gitignore` 整備済み（.DS_Store / *.tmp / *.bak / ~$* / node_modules 等を除外）
+- 注意：Cowork（サンドボックス）はGoogleドライブ上で `.git` の削除・置換ができないため、**Git操作はMac上のCodex等で行う**。フォルダ内に作りかけの `.git` が残存している場合は、Mac側で `rm -rf .git` してから再初期化すること。
+
+---
+
 ## 更新履歴
 
+- 2026-06-16：GitHub（Private）連携を整備し初回push（前提日 2026-06-16）。Git操作はMac側で実施する方針を明記
 - 2026-06-16：TRADING_MAP.md 新規作成（管理正本を整備）
 - 2026-06-14：方針メモ・シミュレーション・チャート一式を整備
