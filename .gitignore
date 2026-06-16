@@ -1,0 +1,13 @@
+# OS / 一時ファイル
+.DS_Store
+*.tmp
+*.bak
+~$*
+
+# Googleドライブ同期メタ
+*.gdoc
+desktop.ini
+
+# 依存物（外部キャッシュへのリンク・再生成可能）
+node_modules/
+.codex_work/**/node_modules

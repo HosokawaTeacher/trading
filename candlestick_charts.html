@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5モデル候補 蝋燭足チャート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #1f2937;
+      --muted: #667085;
+      --line: #d9dee8;
+      --accent: #0f766e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    }
+
+    header {
+      padding: 20px 24px 12px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    main {
+      padding: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 16px;
+    }
+
+    .chart {
+      min-height: 440px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .chart-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .model {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .tradingview-widget-container {
+      height: 390px;
+    }
+
+    .tradingview-widget-container__widget {
+      height: 100%;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        padding: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .chart {
+        min-height: 390px;
+      }
+
+      .tradingview-widget-container {
+        height: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>5モデル候補 蝋燭足チャート</h1>
+    <p class="sub">日足・直近12ヶ月。TradingViewの市場データを表示します。価格入力前の観察用です。</p>
+  </header>
+  <main>
+    <section class="grid">
+      <article class="chart"><div class="chart-head"><span class="name">7011 三菱重工業</span><span class="model">M1/M2/M3/M4</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:7011","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">6857 アドバンテスト</span><span class="model">M1</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:6857","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">8035 東京エレクトロン</span><span class="model">M1</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:8035","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">6501 日立製作所</span><span class="model">M2</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:6501","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">7735 SCREENホールディングス</span><span class="model">M2</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:7735","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">1306 TOPIX連動型ETF</span><span class="model">M3/M5</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:1306","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">1321 日経225連動型ETF</span><span class="model">M3</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:1321","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">9984 ソフトバンクグループ</span><span class="model">M4</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:9984","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">8306 三菱UFJ FG</span><span class="model">M4/M5</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:8306","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+      <article class="chart"><div class="chart-head"><span class="name">9433 KDDI</span><span class="model">M5</span></div><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"TSE:9433","interval":"D","timezone":"Asia/Tokyo","theme":"light","style":"1","locale":"ja","withdateranges":true,"range":"12M","hide_side_toolbar":false,"allow_symbol_change":false,"save_image":true,"calendar":false,"support_host":"https://www.tradingview.com"}</script></div></article>
+    </section>
+  </main>
+</body>
+</html>
