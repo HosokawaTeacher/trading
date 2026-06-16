@@ -10,6 +10,7 @@
 
 トレーディングフォルダ内の状態・構成を一覧／制御する正本。
 このフォルダで作業するAI（Claude／Codex等）は、**最初にこのファイルを読む**こと。
+作業AIはまず TRADING_MAP.md を読み、次に LEARNING_LOG.md（履歴）と EXTERNAL_MEMORY_NOTES.md（運用ノウハウ）を読む。
 状態・ファイル構成の「唯一の正」はこのファイル（他ファイルに表を重複させない）。
 
 > **AI-Hubとは独立した別系統。** AI-Hubの運用ルール（_MASTER/PROJECT_MAP.md・MASTER_CONTEXT.md等の読み込み）は**適用しない**。相互参照・連携も前提としない。
@@ -34,10 +35,13 @@
 | TRADING_MAP.md | 本ファイル。状態・構成の正本 | 🟢 運用中 |
 | README.md | フォルダ全体の説明 | 🟢 |
 | trading_policy_20260614.md | 資金管理・候補銘柄・損切利確の方針メモ | 🟢 最新 |
+| LEARNING_LOG.md | セッションごとの学習・検証ログ（蓄積・AI引き継ぎ用） | 🟢 新規 |
+| EXTERNAL_MEMORY_NOTES.md | 外部記憶化の運用ノウハウ（AI-Hub手法の抽出・適用） | 🟢 新規 |
 | candlestick_charts.html | 候補銘柄の日足チャート一覧（TradingView埋込） | 🟢 |
 | outputs/candlestick_charts_20260614/ | 候補銘柄のチャート画像 | 🟢 |
 | outputs/trading_sim_20260614/ | 5モデルの1ヶ月シミュレーションExcel | 🟢 |
 | .codex_work/trading_sim/build_trading_sim.mjs | シミュレーションExcel生成スクリプト | 🟢 |
+| CODEX_HANDOFF.md / CLAUDE_CODE_HANDOFF.md | Git仕上げ用の引き継ぎプロンプト（履歴用） | 🟢 |
 
 ---
 
@@ -66,14 +70,20 @@
 ## GitHub連携
 
 - リモート：`https://github.com/HosokawaTeacher/trading.git`（Private）
-- 初回push済み（前提日 2026-06-16）。コミット `a41c30cb87e1fd658a42f0bef29ec1843b3044d7` = リモート `main`
+- 状態：**作業フォルダがリモート `main` と正式に紐づき済み**（ローカル＝リモート一致）
+- 最新コミット：`551ccb4cd3de2e64b235b8326d16427b22910d3b`（"Sync working folder to repo"、前提日 2026-06-16）
+- 初回push：`a41c30cb87e1fd658a42f0bef29ec1843b3044d7`（2026-06-16、一時コピー経由）
 - `.gitignore` 整備済み（.DS_Store / *.tmp / *.bak / ~$* / node_modules 等を除外）
-- 注意：Cowork（サンドボックス）はGoogleドライブ上で `.git` の削除・置換ができないため、**Git操作はMac上のCodex等で行う**。フォルダ内に作りかけの `.git` が残存している場合は、Mac側で `rm -rf .git` してから再初期化すること。
+- 運用：以後はこのフォルダから通常の `git add` / `commit` / `push` で更新可。
+- 注意：Cowork（サンドボックス）はGoogleドライブ上で `.git` の削除・置換ができない。Codexも自身のサンドボックス内では同様に不可。**Git操作はMac上のClaude Code等のサンドボックス外環境で行う**こと。Drive同期下のため、push中は同期を一時停止すると `.git` 破損リスクを下げられる。
 
 ---
 
 ## 更新履歴
 
-- 2026-06-16：GitHub（Private）連携を整備し初回push（前提日 2026-06-16）。Git操作はMac側で実施する方針を明記
+- 2026-06-16：EXTERNAL_MEMORY_NOTES.md 新規作成。AI-Hubの外部記憶化手法を抽出し適用案を整理。前提日 2026-06-16
+- 2026-06-16：LEARNING_LOG.md 新規作成（学習・検証ログの蓄積開始）。データ更新（候補7銘柄の直近値・監視ライン照合）・損益シミュレーション（建て方A/B比較）・学習方針を記録。前提日 2026-06-16
+- 2026-06-16：作業フォルダをリモートmainと正式紐づけ、`git push` 完了（コミット `551ccb4`、前提日 2026-06-16）。Mac上のClaude Codeで実施
+- 2026-06-16：GitHub（Private）連携を整備し初回push（コミット `a41c30c`、一時コピー経由）。Git操作はMac側で実施する方針を明記
 - 2026-06-16：TRADING_MAP.md 新規作成（管理正本を整備）
 - 2026-06-14：方針メモ・シミュレーション・チャート一式を整備
