@@ -140,7 +140,7 @@
 
 - リモート：`https://github.com/HosokawaTeacher/trading.git`（Private）
 - 状態：**作業フォルダがリモート `main` と正式に紐づき済み**（ローカル＝リモート一致）
-- 最新コミット：`551ccb4cd3de2e64b235b8326d16427b22910d3b`（"Sync working folder to repo"、前提日 2026-06-16）
+- 検証仕様v1実装コミット：`bbbeabcfefbe1bf4564758dbc172f53a30c7a389`（"Implement verification spec v1 (2026-06-21)"、一時コピー経由で`main`へpush）
 - 初回push：`a41c30cb87e1fd658a42f0bef29ec1843b3044d7`（2026-06-16、一時コピー経由）
 - `.gitignore` 整備済み（.DS_Store / *.tmp / *.bak / ~$* / node_modules 等を除外）
 - 運用：以後はこのフォルダから通常の `git add` / `commit` / `push` で更新可。
@@ -151,6 +151,7 @@
 
 ## 更新履歴
 
+- 2026-06-21：検証仕様v1関連のExcel・仕様書・会議ボード・ログをprivate GitHub `main` へpush（コミット `bbbeabcfefbe1bf4564758dbc172f53a30c7a389`）。前提日 2026-06-21
 - 2026-06-21：ステップ2の暫定最終結論を記録（n=2／A>B、ただし3群とも日経に劣後）。最優先改善「強トレンド枠」を WIN_RATE_60_PLAYBOOK.md に検証対象として追加。会議は MEETING_20260621_strategy_review.md でクローズ。前提日 2026-06-21
 - 2026-06-21：検証仕様v1に基づきExcel「ステップ2_ルール検証」を改修。基準日を6/12終値に置き直し、往復0.1%、翌営業日始値約定、終値DD＋MAE、1建玉=1取引、再投資なし/実運用別建て、前進/過去別シート、定性語判定式を実装。再計算エラー0。n=2のため動作確認のみ。前提日 2026-06-21
 
